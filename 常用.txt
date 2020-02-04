@@ -1,0 +1,72 @@
+常用：
+
+
+
+clean install -Dmaven.test.skip=true -Dfile.encoding=UTF-8 -Dmaven.javadoc.skip=true -Psit           maven参数
+
+
+-Xms64m -Xmx512m -XX:MaxPermSize=256m -Djboss.bind.address=10.49.23.196 -Dldc=NJXZ -Djava.security.auth.login.config=       jboss启动参数
+
+
+https://chenjx.cn/google-mirrors/       google镜像站
+
+
+
+接需求注意事项：
+
+你们接的需求要求产品：需求文档必需要有，正式的需求评审，业务背景是？
+日调用量是多少？并发多少？TPS？大促相关不？接口出入参是？算法进度？
+什么时候上线？开发在那个系统里？
+
+
+mvn assembly:assembly -Dmaven.test.skip=true,包含所有依赖打包
+
+
+标准JVM参数1536M
+
+
+查看进程占用端口
+netstat tpnl | grep 8787
+
+
+实时监控机器CPU内存
+cd /nmon
+./nmon_x86_rhel6
+c    CPU
+m    Memory
+
+
+vi文件中显示行数
+:set nu
+:50
+
+
+
+<!--swagger2markup start-->
+        <dependency>
+            <groupId>io.github.swagger2markup</groupId>
+            <artifactId>swagger2markup</artifactId>
+            <version>1.3.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.3</version>
+        </dependency>
+        <!--swagger2markup end-->
+		
+		
+		#清空索引
+
+POST quality_control/my_type/_delete_by_query?refresh&slices=5&pretty { "query": { "match_all": {} } }
+
+
+
+mvn dependency:tree		--查看dependency树
+
+
+
+
+
+-Xms512m -Xmx2048m -XX:MaxPermSize=2048m -Djboss.bind.address=10.49.23.5 -Dldc=NJXZ -Dfile.encoding=UTF-8 -Djava.security.auth.login.config=

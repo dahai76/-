@@ -1,0 +1,63 @@
+常用命令：
+1.监控堆栈内存情况
+cmd/jconsole
+2.maven打包命令
+mvn clean install -Psit -DfailIfNoTests=false -Dmaven.javadoc.skip=true -Dmaven.test.skip=true
+mvn clean package -Dmaven.test.skip=true -Dmaven.file.Encoding=UTF-8 -Dmaven.javadoc.skip=true -Pdev
+3.wildfly启动命令
+-Xms64m -Xmx512m -XX:MaxPermSize=256m -Djboss.bind.address=10.49.130.112 -Dldc=NJXZ -Djava.security.auth.login.config=
+4.上线前war包检查的打包命令
+clean install -Psit -DfailIfNoTests=false -Dmaven.javadoc.skip=true -Dmaven.test.skip=true -Pprod
+查看dependency树
+mvn dependency:tree
+
+mvn dependency:tree -Dverbose
+mvn dependency:build-classpath
+mvn clean install -Dtest -DfailIfNoTests=false -Dmaven.javadoc.skip=true
+mvn assembly:assembly
+mvn dependency:sources
+mvn dependency:resolve -Dclassifier=javadoc
+find . -name "*wmq*" 查找当前目录下包含wmq字符串的文件名
+-Djava.library.path=/usr/local/lib:/opt/cfre/lib
+快学Scala P30
+192.168.119.72 maven.cnsuning.com
+-Xms64m -Xmx512m -XX:MaxPermSize=256m -Djboss.bind.address=169.254.50.248
+sh standalone.sh --debug 8787  -b 0.0.0.0 >&1 &
+tail -f /opt/wildfly/standalone/log/server.log
+export JAVA_HOME=/opt/jboss/java64/jdk1.7.0_25
+export CLASSPATH=$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:.
+export PATH=$PATH:$JAVA_HOME/bin
+CBT用户组 【大数据中心应用开发部】
+export JAVA_HOME=/opt/wildfly/java64/jdk1.7.0_25
+export CLASSPATH=$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:.
+export PATH=$PATH:$JAVA_HOME/bin
+
+<http://bi.cnsuning.com/SuningBI/#>
+<http://ise.cnsuning.com/ise-web/swagger-ui.html>
+<http://ise.cnsuning.com/ise-web/monitoring>
+<http://snrs.cnsuning.com/> Redis管理工具
+chart.cnsuning.com
+<http://ued.cnsuning.com/meetingroom/#room_7_144>  后面轮到下一个的，会议室
+<http://logback.cnsuning.com/>
+查看进程开启的线程
+top -H -p 15316
+<option value="-Xdebug "/>
+                    <option value="-Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8787"/>message:PictureBuyController AND message:总耗时
+zabbix取IP列表
+$("#treeDemo_4_ul").find("li").each(function(){console.log($(this).text());});
+
+root/123456
+Zhangyq*123 /密码
+FTP文件上传失败
+异常：java.net.SocketException: Permission denied: recv failed
+JVM参数加： -Djava.net.preferIPv4Stack=true
+清空kafka消息队列
+kafka-console-consumer.sh --zookeeper 10.27.189.251:2181,10.27.189.252:2181,10.27.189.253:2181 --group cqes_intelligent_pic_detect --topic ivms_intelligent_pic_detect
+
+xshell命令：
+tail -f server.log 实时查看日志
+查询工程内文本位置
+cd wildfly/standalone/tmp/vfs/temp/neobp-train.war -4325254/WEB-INF/classes/conf/
+
+dev环境无法访问：
+C:\Windows\System32\drivers\etc\hosts 删掉预设的固定的dev环境IP值
